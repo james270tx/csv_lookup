@@ -58,10 +58,14 @@ count = 0
 outfile = "summary.csv"
 with open(outfile,'w',newline='') as write_obj:
     csv_writer = csv.writer(write_obj)
+    print("Writing headers to",outfile)
+    this_row = ["Index","Customer Id","Last Name","Company","Subscription Date"]
+    csv_writer.writerow(this_row)
+    count += 1
     for i in range(0,len(customer_query)):
         r = customer_index[i] # r is used below instead of i as it is pertains to the index on the reference file
         this_row = [customer_index[i],customer_query[i],customer_name[r],company_name[r],subscription_date[r]]
         csv_writer.writerow(this_row)
         count += 1
 write_obj.close()
-print(count,"customer records written to",outfile)
+print(count,"rows written to",outfile)
