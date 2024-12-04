@@ -1,11 +1,13 @@
 csv_lookup.py by james270tx
 
-This is used to lookup records of one csv from another
+A demo of my process for using python to lookup records in one csv to another
+This can be usefull for looking up deatils of customer records en mass from a text file or csv
 
-customers-1000.csv is the master list containing all details
+csv_lookup.py matches details from the reference file customers-1000.csv to the query file demo-input.csv
 
-demo-input.csv is the list of ids we intend to look up
+demo_generator.py creates demo-input.csv: a random csv of 100 customer ids to query against the customers-1000.csv master list.
 
-summary.csv is the results showing details to match each id that we have looked up
+demo-input.csv is the list of customer ids we intend to look up to the details of
+customers-1000.csv is the reference file containing all details
+summary.csv is the results 
 
-demo_generator.py creates a random csv of 100 customer ids to use as querys for the lookup
